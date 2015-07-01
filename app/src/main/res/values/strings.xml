@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Sunshine</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh" translatable="false">Refresh</string>
+    <string name="action_find_loc">Find Location</string>
+    <string name="action_share">Share</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="pref_loc_title">Location</string>
+    <string name="pref_loc_default" translatable="false">Athens,Greece</string>
+    <string name="pref_loc_key" translatable="false">location</string>
+    <string name="pref_unit_title">Temperature Units</string>
+    <string name="pref_unit_key" translatable="false">unit</string>
+    <string-array name="pref_unit_array" translatable="false">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </string-array>
+    <string name="pref_unit_default" translatable="false">Metric</string>
+    <string name="pref_unit_metric" translatable="false">Metric</string>
+    <string name="pref_unit_imperial" translatable="false">Imperial</string>
+    <string name="noAppForLocation">Didn\'t find any app to display the location</string>
+</resources>
