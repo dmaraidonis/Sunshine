@@ -19,7 +19,6 @@ import android.widget.TextView;
  */
 public class DetailActivityFragment extends Fragment {
 
-    private ShareActionProvider mShareActionProvider;
     String forecastFromMain = "";
 
     public DetailActivityFragment() {
@@ -55,7 +54,7 @@ public class DetailActivityFragment extends Fragment {
         MenuItem item = menu.findItem(R.id.action_share);
 
         // Fetch and store ShareActionProvider
-        mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
+        ShareActionProvider mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
         if (mShareActionProvider != null) {
             mShareActionProvider.setShareIntent(returnShareIntent());
         }
@@ -63,12 +62,11 @@ public class DetailActivityFragment extends Fragment {
     }
 
     private Intent returnShareIntent() {
-        Intent shareIntent = new Intent()
+        return new Intent()
                 .setAction(Intent.ACTION_SEND)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET)
                 .putExtra(Intent.EXTRA_TEXT, forecastFromMain + " #SunshineApp")
                 .setType("text/plain");
-        return shareIntent;
     }
 
 }
